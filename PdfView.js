@@ -105,7 +105,7 @@ export default class PdfView extends Component {
             if (this._flatList) {
                 this._flatList.scrollToIndex({animated: false, index: this.props.page < 1 ? 0 : this.props.page - 1});
             }
-        }, 200);
+        }, 100);
     }
 
     componentWillReceiveProps(nextProps) {
@@ -126,7 +126,7 @@ export default class PdfView extends Component {
                 clearTimeout(this._scrollTimer);
                 this._scrollTimer = setTimeout(() => {
                     this._flatList.scrollToIndex({animated: false, index: page - 1});
-                }, 200);
+                }, 100);
             }
         }
 
